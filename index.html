@@ -3,11 +3,48 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kafeel Ur Rahman — WordPress & Shopify Developer</title>
-  <meta name="description" content="Portfolio of Kafeel Ur Rahman — WordPress & Shopify Developer. Custom themes, e‑commerce, and full‑stack web solutions." />
+  <title>Kafeel Ur Rahman — WordPress, Shopify, Wix, PrestaShop & Webflow Developer</title>
+  <meta name="description" content="Portfolio of Kafeel Ur Rahman — Expert in WordPress, Shopify (Liquid), Wix, PrestaShop, and Webflow. Custom themes, e-commerce, speed & SEO, and full-stack integrations." />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Kafeel Ur Rahman — WordPress, Shopify, Wix, PrestaShop & Webflow Developer" />
+  <meta property="og:description" content="Custom themes, e-commerce builds, UI performance, and full-stack integrations for high-converting sites." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kafeel.dev/" />
+  <meta property="og:image" content="https://kafeel.dev/og-cover.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kafeel Ur Rahman — Web Developer" />
+  <meta name="twitter:description" content="WordPress • Shopify • Wix • PrestaShop • Webflow • SEO & Performance" />
+  <meta name="twitter:image" content="https://kafeel.dev/og-cover.jpg" />
+
+  <!-- JSON-LD (Person) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Kafeel Ur Rahman",
+    "jobTitle": "Web Developer",
+    "url": "https://kafeel.dev/",
+    "email": "mailto:Krmughal31@gmail.com",
+    "telephone": "+92-340-8863377",
+    "knowsAbout": [
+      "WordPress", "WooCommerce", "Shopify Liquid", "Wix",
+      "PrestaShop", "Webflow", "HTML", "CSS", "JavaScript", "PHP",
+      "ACF", "Gutenberg", "Theme Development", "Performance", "SEO", "REST APIs", "Git", "CI/CD"
+    ],
+    "sameAs": [
+      "https://github.com/Kafeel-Ur-Rahman",
+      "https://www.linkedin.com/in/kafeel-ur-rahman-wordpress-developer/"
+    ],
+    "worksFor": {"@type": "Organization", "name": "ESOLS Technologies"},
+    "address": {"@type": "PostalAddress", "addressCountry": "PK", "addressLocality": "Islamabad"}
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
   <style>
     :root{
       --bg:#0b1220;           /* Deep navy */
@@ -51,6 +88,7 @@
     .nav-links a:hover{border-color:var(--line);background:rgba(255,255,255,.03)}
     .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:14px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#061024;border:none;cursor:pointer;font-weight:700;box-shadow:0 10px 22px rgba(109,214,255,.25);transition:transform .15s ease}
     .btn:active{transform:translateY(1px)}
+    .ghost{padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.02)}
 
     /* ====== HERO ====== */
     .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center}
@@ -58,7 +96,6 @@
     .hero h2{font-size: clamp(34px, 6vw, 56px);line-height:1.1;margin:14px 0 14px;font-weight:800}
     .hero p{color:var(--muted);font-size:18px}
     .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px}
-    .ghost{padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.02)}
 
     .device{aspect-ratio: 4/3;background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:24px;position:relative;overflow:hidden;box-shadow:var(--shadow)}
     .blob{position:absolute;width:340px;height:340px;filter:blur(40px);opacity:.35;border-radius:50%;background:radial-gradient(circle,var(--brand) 0%, transparent 60%);left:-40px;top:-40px;animation:float 9s ease-in-out infinite}
@@ -134,7 +171,7 @@
 </head>
 <body>
   <!-- NAV -->
-  <nav class="nav">
+  <nav class="nav" aria-label="Primary navigation">
     <div class="nav-inner">
       <div class="brand">
         <div class="logo" aria-hidden="true"></div>
@@ -146,8 +183,8 @@
         <a href="#services">Services</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
-        <a class="ghost" href="https://github.com/Kafeel-Ur-Rahman" target="_blank" rel="noreferrer">GitHub</a>
-        <a class="btn" href="#contact">Hire Me</a>
+        <a class="ghost" href="https://github.com/Kafeel-Ur-Rahman" target="_blank" rel="noreferrer" rel="me">GitHub</a>
+        <a class="btn" href="#contact" aria-label="Hire Kafeel">Hire Me</a>
       </div>
     </div>
   </nav>
@@ -155,16 +192,19 @@
   <!-- HERO -->
   <section id="home" class="container hero">
     <div class="reveal">
-      <span class="badge">👋 Hello, I'm</span>
-      <h2>Kafeel Ur Rahman —<br/> WordPress & Shopify Developer</h2>
-      <p>I build fast, SEO‑friendly websites, custom Shopify themes, and scalable e‑commerce solutions. From design to deployment, I handle the full stack.</p>
+      <span class="badge" aria-label="Greeting">👋 Hello, I'm</span>
+      <h2>Kafeel Ur Rahman —<br/> WordPress, Shopify, Wix, PrestaShop & Webflow Developer</h2>
+      <p>
+        Creative and results-driven Web Developer with 4+ years building responsive, high-converting websites and custom e-commerce solutions.
+        I ship clean code, smooth animations, and Lighthouse-friendly performance with rock-solid SEO & tracking. <!-- CV summary used :contentReference[oaicite:1]{index=1} -->
+      </p>
       <div class="cta">
         <a class="btn" href="#projects">View Projects</a>
-        <a class="ghost" href="mailto:contact@example.com">contact@example.com</a>
-        <a class="ghost" href="#" download>Download CV</a>
+        <a class="ghost" href="mailto:Krmughal31@gmail.com">Krmughal31@gmail.com</a>
+        <a class="ghost" href="kafeel.cv.pdf" download="Kafeel-Ur-Rahman-CV.pdf" aria-label="Download CV">Download CV</a>
       </div>
     </div>
-    <div class="device reveal">
+    <div class="device reveal" aria-hidden="true">
       <div class="blob"></div><div class="blob blob2"></div>
       <div class="preview">
         <div class="bar">
@@ -193,13 +233,16 @@
   <section id="about" class="container">
     <div class="head">
       <h3>About</h3>
-      <p>11+ Shopify launches • 30+ WordPress sites • Performance‑first</p>
+      <p>ESOLS Technologies • 4+ years • Performance-first</p>
     </div>
     <div class="about">
       <div class="card reveal">
         <h4 style="margin:0 0 6px 0">Who I am</h4>
-        <p style="margin:0;color:var(--muted)">I craft elegant, conversion‑focused websites with clean code and smooth animations. My work spans custom themes, headless commerce, and API integrations.</p>
-        <div class="stats">
+        <p style="margin:0;color:var(--muted)">
+          I craft elegant, conversion-focused websites and scalable storefronts. My stack covers WordPress (Gutenberg/ACF), WooCommerce, Shopify (Liquid),
+          Wix, PrestaShop, and Webflow — with custom APIs, analytics, and CI/CD baked in. <!-- Based on CV stack :contentReference[oaicite:2]{index=2} -->
+        </p>
+        <div class="stats" aria-label="Quick stats">
           <div class="stat"><h4 id="stat1">0+</h4><span>Projects</span></div>
           <div class="stat"><h4 id="stat2">0+</h4><span>Clients</span></div>
           <div class="stat"><h4 id="stat3">0+</h4><span>Deploys</span></div>
@@ -208,16 +251,29 @@
       <div class="card reveal">
         <h4 style="margin:0 0 6px 0">Skills</h4>
         <p style="margin:0;color:var(--muted)">Toolbox I use daily.</p>
-        <div class="chips">
+        <div class="chips" aria-label="Skills and tools">
           <span class="chip">WordPress</span>
-          <span class="chip">Shopify (Liquid)</span>
           <span class="chip">WooCommerce</span>
-          <span class="chip">Theme Customization</span>
+          <span class="chip">Shopify (Liquid)</span>
+          <span class="chip">Wix</span>
+          <span class="chip">PrestaShop</span>
+          <span class="chip">Webflow</span>
+          <span class="chip">Gutenberg & ACF</span>
+          <span class="chip">Theme Dev & Customization</span>
           <span class="chip">JavaScript</span>
           <span class="chip">HTML/CSS</span>
-          <span class="chip">Performance & SEO</span>
+          <span class="chip">PHP</span>
           <span class="chip">REST APIs</span>
+          <span class="chip">SEO & Performance</span>
           <span class="chip">Git & CI</span>
+          <span class="chip">MySQL</span>
+          <span class="chip">cPanel & Hosting</span>
+          <span class="chip">Responsive Design</span>
+        </div>
+        <div class="chips" style="margin-top:14px" aria-label="Languages">
+          <span class="chip">Urdu — Fluent</span>
+          <span class="chip">Hindku — Fluent</span>
+          <span class="chip">English — Intermediate</span> <!-- From CV :contentReference[oaicite:3]{index=3} -->
         </div>
       </div>
     </div>
@@ -227,22 +283,37 @@
   <section id="services" class="container">
     <div class="head">
       <h3>Services</h3>
-      <p>End‑to‑end solutions tailored to your brand.</p>
+      <p>End-to-end solutions tailored to your brand.</p>
     </div>
     <div class="services">
       <div class="card service reveal">
         <h4>Custom WordPress</h4>
-        <p style="color:var(--muted)">Themes, block editor, ACF integrations, and blazing performance.</p>
+        <p style="color:var(--muted)">Themes, Gutenberg blocks, ACF, WooCommerce, and performance/SEO with clean PHP & JS.</p>
         <div class="spark"></div>
       </div>
       <div class="card service reveal">
         <h4>Shopify Stores</h4>
-        <p style="color:var(--muted)">Conversion‑focused storefronts, Liquid customizations, and app wiring.</p>
+        <p style="color:var(--muted)">Liquid themes, custom sections, app wiring, GA4 & pixel tracking, and CRO-ready UX.</p>
+        <div class="spark"></div>
+      </div>
+      <div class="card service reveal">
+        <h4>Wix • PrestaShop • Webflow</h4>
+        <p style="color:var(--muted)">Professional builds, template customization, CMS/data modeling, and SEO setups across platforms.</p>
         <div class="spark"></div>
       </div>
       <div class="card service reveal">
         <h4>Maintenance & SEO</h4>
-        <p style="color:var(--muted)">Speed optimization, audits, backups, and technical SEO.</p>
+        <p style="color:var(--muted)">Speed optimization, audits, backups, uptime, security hardening, and technical SEO.</p>
+        <div class="spark"></div>
+      </div>
+      <div class="card service reveal">
+        <h4>Integrations & APIs</h4>
+        <p style="color:var(--muted)">Payment/shipping, CRM, email automation, REST APIs, and analytics dashboards.</p>
+        <div class="spark"></div>
+      </div>
+      <div class="card service reveal">
+        <h4>Migrations & Conversions</h4>
+        <p style="color:var(--muted)">Figma/Adobe XD/Canva → live site, HTML → WordPress, and platform-to-platform migrations.</p>
         <div class="spark"></div>
       </div>
     </div>
@@ -257,7 +328,6 @@
     <div class="grid">
       <article class="project reveal" data-tilt>
         <div class="thumb"><span class="tag">Shopify</span>
-          <!-- simple icon -->
           <svg width="68" height="68" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M5 7.5V20a1 1 0 0 0 1.2.98l10-2.22A1 1 0 0 0 17 17.8V5.5a1 1 0 0 0-1.2-.98L5.8 6.74A1 1 0 0 0 5 7.5Z" stroke="rgba(255,255,255,.6)"/>
             <path d="M9 5V3.5C9 2.67 9.67 2 10.5 2h1C12.33 2 13 2.67 13 3.5V4" stroke="rgba(255,255,255,.6)"/>
@@ -265,7 +335,7 @@
         </div>
         <div class="body">
           <h4>Minimalist Storefront</h4>
-          <p>Custom Liquid theme with fancy cart drawer and predictive search.</p>
+          <p>Custom Liquid theme with cart drawer, predictive search, and app integrations.</p>
         </div>
       </article>
 
@@ -291,7 +361,43 @@
         </div>
         <div class="body">
           <h4>Catalog & Checkout</h4>
-          <p>Optimized product filters, custom checkout fields, and GA4 events.</p>
+          <p>Optimized filters, custom checkout fields, and GA4 events.</p>
+        </div>
+      </article>
+
+      <article class="project reveal" data-tilt>
+        <div class="thumb"><span class="tag">Wix</span>
+          <svg width="68" height="68" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 7h16v10H4z" stroke="rgba(255,255,255,.6)"/><path d="M6 10h12M6 14h8" stroke="rgba(255,255,255,.6)"/>
+          </svg>
+        </div>
+        <div class="body">
+          <h4>Portfolio Revamp</h4>
+          <p>Wix CMS collection design, custom interactions, and SEO setup.</p>
+        </div>
+      </article>
+
+      <article class="project reveal" data-tilt>
+        <div class="thumb"><span class="tag">Webflow</span>
+          <svg width="68" height="68" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M6 18l4-12 4 8 4-6" stroke="rgba(255,255,255,.6)"/>
+          </svg>
+        </div>
+        <div class="body">
+          <h4>Landing System</h4>
+          <p>Component library, CMS collections, and multi-variant animations.</p>
+        </div>
+      </article>
+
+      <article class="project reveal" data-tilt>
+        <div class="thumb"><span class="tag">PrestaShop</span>
+          <svg width="68" height="68" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M5 8h14v8H5z" stroke="rgba(255,255,255,.6)"/><path d="M7 10h10M7 14h6" stroke="rgba(255,255,255,.6)"/>
+          </svg>
+        </div>
+        <div class="body">
+          <h4>Multi-Currency Store</h4>
+          <p>Custom theme tweaks, payment/shipping modules, and schema markup.</p>
         </div>
       </article>
     </div>
@@ -304,35 +410,60 @@
       <p>Tell me about your project. I reply within 24 hours.</p>
     </div>
     <div class="contact">
-      <form class="card reveal" onsubmit="event.preventDefault(); window.location.href = 'mailto:contact@example.com?subject=Project%20Inquiry%20—%20Kafeel%20Ur%20Rahman&body=' + encodeURIComponent(document.getElementById('msg').value);">
+      <form class="card reveal" aria-labelledby="contactFormHeading"
+        onsubmit="event.preventDefault();
+          const body=`
+Name: ${document.getElementById('name').value}
+Email: ${document.getElementById('email').value}
+
+Project:
+${document.getElementById('msg').value}
+`;
+          window.location.href = 'mailto:Krmughal31@gmail.com?subject=' + encodeURIComponent('Project Inquiry — Kafeel Ur Rahman') + '&body=' + encodeURIComponent(body);
+        ">
+        <h4 id="contactFormHeading" style="margin:0 0 6px 0">Quick message</h4>
         <div class="field">
           <label for="name">Your name</label>
-          <input id="name" placeholder="John Doe" required>
+          <input id="name" placeholder="John Doe" required aria-required="true">
         </div>
         <div class="field">
           <label for="email">Email</label>
-          <input id="email" type="email" placeholder="you@example.com" required>
+          <input id="email" type="email" placeholder="you@example.com" required aria-required="true">
         </div>
         <div class="field">
           <label for="msg">Project details</label>
-          <textarea id="msg" placeholder="I need a Shopify store with..." required></textarea>
+          <textarea id="msg" placeholder="I need a Shopify store with..." required aria-required="true"></textarea>
         </div>
         <button class="btn" type="submit">Send Message</button>
-        <span class="note">This form opens your email app. Replace the email address in the button with yours.</span>
+        <span class="note">This opens your email app. You can replace the address with another inbox if needed.</span>
       </form>
 
       <div class="card reveal">
         <h4>Contact</h4>
         <p style="color:var(--muted)">Prefer email? Reach me anytime.</p>
-        <p><strong>Email:</strong> contact@example.com</p>
+        <p><strong>Phone:</strong> <a href="tel:+923408863377">+92 340 8863377</a></p>
+        <p><strong>Email:</strong> <a href="mailto:Krmughal31@gmail.com">Krmughal31@gmail.com</a></p>
         <p><strong>GitHub:</strong> <a href="https://github.com/Kafeel-Ur-Rahman" target="_blank" rel="noreferrer">github.com/Kafeel-Ur-Rahman</a></p>
-        <p><strong>Location:</strong> Pakistan (Remote friendly)</p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/kafeel-ur-rahman-wordpress-developer/" target="_blank" rel="noreferrer">linkedin.com/in/kafeel-ur-rahman-wordpress-developer</a></p>
+        <p><strong>Location:</strong> Islamabad, Pakistan (Remote friendly)</p>
+        <hr style="border-color:var(--line);border-width:1px 0 0;margin:14px 0">
+        <h4 style="margin:0 0 6px 0">Experience</h4>
+        <p style="margin:0;color:var(--muted)">
+          ESOLS Technologies — WordPress Developer (2023–Present)<br/>
+          ROZE NEWS — Web Developer (2022–2024)<br/>
+          NexoLeaf — Web Developer (2018–2022) <!-- From CV :contentReference[oaicite:4]{index=4} -->
+        </p>
+        <h4 style="margin:14px 0 6px 0">Education</h4>
+        <p style="margin:0;color:var(--muted)">
+          BS Computer Science — Abasyn University (2018–2023)<br/>
+          DIT — Punjab Technical Board (2015–2018) <!-- From CV :contentReference[oaicite:5]{index=5} -->
+        </p>
       </div>
     </div>
   </section>
 
   <footer>
-    © <span id="year"></span> Kafeel Ur Rahman — WordPress & Shopify Developer. Built with ♥ and clean code.
+    © <span id="year"></span> Kafeel Ur Rahman — Web Developer. Built with ♥ and clean code.
   </footer>
 
   <script>
@@ -359,15 +490,22 @@
       }; requestAnimationFrame(step);
     };
     const statsIO=new IntersectionObserver((entries)=>{
-      entries.forEach(en=>{ if(en.isIntersecting){ countTo(document.getElementById('stat1'), 45); countTo(document.getElementById('stat2'), 28); countTo(document.getElementById('stat3'), 120); statsIO.disconnect(); }});
+      entries.forEach(en=>{
+        if(en.isIntersecting){
+          countTo(document.getElementById('stat1'), 45);
+          countTo(document.getElementById('stat2'), 28);
+          countTo(document.getElementById('stat3'), 120);
+          statsIO.disconnect();
+        }
+      });
     },{threshold:.6});
     statsIO.observe(document.getElementById('about'));
 
     // Subtle tilt for project cards
     const tilt=(card)=>{
       const r=12; // rotation limit
-      const rect=card.getBoundingClientRect();
       card.addEventListener('mousemove', (e)=>{
+        const rect=card.getBoundingClientRect();
         const x=(e.clientX-rect.left)/rect.width*2-1;
         const y=(e.clientY-rect.top)/rect.height*2-1;
         card.style.transform=`rotateX(${-y*r}deg) rotateY(${x*r}deg) translateY(-3px)`;
