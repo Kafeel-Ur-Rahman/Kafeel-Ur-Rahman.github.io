@@ -131,10 +131,18 @@
     .spark{position:absolute;inset:auto 0 0 0;height:4px;background:linear-gradient(90deg,var(--brand),var(--brand-2));opacity:0;transform:translateY(6px);transition:.25s ease}
 
     /* ====== PROJECTS ====== */
+    .tabs {display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap;}
+    .tab-btn {padding: 10px 18px; border-radius: 12px; border: 1px solid var(--line); background: rgba(255,255,255,.02); cursor: pointer; transition: all 0.2s ease;}
+    .tab-btn:hover {background: rgba(255,255,255,.05);}
+    .tab-btn.active {background: linear-gradient(135deg, var(--brand), var(--brand-2)); color: #061024; border-color: transparent;}
+    .tab-content {display: none;}
+    .tab-content.active {display: grid;}
+    
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .project{position:relative;overflow:hidden;border-radius:18px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));transform-style:preserve-3d;transition:transform .12s ease}
     .project:hover{transform:translateY(-3px)}
-    .thumb{aspect-ratio: 16/10;background:linear-gradient(135deg,#101b3a,#0e1731);display:grid;place-items:center}
+    .thumb{aspect-ratio: 16/10;background:linear-gradient(135deg,#101b3a,#0e1731);display:grid;place-items:center;overflow:hidden;}
+    .thumb img {width: 100%; height: 100%; object-fit: cover;}
     .tag{position:absolute;top:12px;left:12px;padding:6px 10px;border-radius:999px;background:rgba(0,0,0,.45);border:1px solid var(--line);font-size:12px}
     .project .body{padding:16px}
     .project h4{margin:0 0 6px 0}
@@ -168,6 +176,7 @@
       .head h3{font-size:22px}
     }
   </style>
+
 </head>
 <body>
   <!-- NAV -->
@@ -196,7 +205,7 @@
       <h2>Kafeel Ur Rahman —<br/> WordPress, Shopify, Wix, PrestaShop & Webflow Developer</h2>
       <p>
         Creative and results-driven Web Developer with 4+ years building responsive, high-converting websites and custom e-commerce solutions.
-        I ship clean code, smooth animations, and Lighthouse-friendly performance with rock-solid SEO & tracking. <!-- CV summary used :contentReference[oaicite:1]{index=1} -->
+        I ship clean code, smooth animations, and Lighthouse-friendly performance with rock-solid SEO & tracking.
       </p>
       <div class="cta">
         <a class="btn" href="#projects">View Projects</a>
@@ -240,7 +249,7 @@
         <h4 style="margin:0 0 6px 0">Who I am</h4>
         <p style="margin:0;color:var(--muted)">
           I craft elegant, conversion-focused websites and scalable storefronts. My stack covers WordPress (Gutenberg/ACF), WooCommerce, Shopify (Liquid),
-          Wix, PrestaShop, and Webflow — with custom APIs, analytics, and CI/CD baked in. <!-- Based on CV stack :contentReference[oaicite:2]{index=2} -->
+          Wix, PrestaShop, and Webflow — with custom APIs, analytics, and CI/CD baked in.
         </p>
         <div class="stats" aria-label="Quick stats">
           <div class="stat"><h4 id="stat1">0+</h4><span>Projects</span></div>
@@ -273,7 +282,7 @@
         <div class="chips" style="margin-top:14px" aria-label="Languages">
           <span class="chip">Urdu — Fluent</span>
           <span class="chip">Hindku — Fluent</span>
-          <span class="chip">English — Intermediate</span> <!-- From CV :contentReference[oaicite:3]{index=3} -->
+          <span class="chip">English — Intermediate</span>
         </div>
       </div>
     </div>
@@ -325,81 +334,152 @@
       <h3>Featured Projects</h3>
       <p>Selected work with clean UX and subtle motion.</p>
     </div>
-    <div class="grid">
-      <article class="project reveal" data-tilt>
-        <div class="thumb"><span class="tag">Shopify</span>
-          <svg width="68" height="68" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M5 7.5V20a1 1 0 0 0 1.2.98l10-2.22A1 1 0 0 0 17 17.8V5.5a1 1 0 0 0-1.2-.98L5.8 6.74A1 1 0 0 0 5 7.5Z" stroke="rgba(255,255,255,.6)"/>
-            <path d="M9 5V3.5C9 2.67 9.67 2 10.5 2h1C12.33 2 13 2.67 13 3.5V4" stroke="rgba(255,255,255,.6)"/>
-          </svg>
-        </div>
-        <div class="body">
-          <h4>Minimalist Storefront</h4>
-          <p>Custom Liquid theme with cart drawer, predictive search, and app integrations.</p>
-        </div>
-      </article>
+    
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="wordpress">WordPress</button>
+      <button class="tab-btn" data-tab="shopify">Shopify</button>
+      <button class="tab-btn" data-tab="other-cms">Other CMS</button>
+    </div>
+    
+    <!-- WordPress Projects -->
+    <div class="tab-content active" id="wordpress-tab">
+      <div class="grid">
+        <article class="project reveal" data-tilt>
+          <div class="thumb">
+            <span class="tag">WordPress</span>
+            <img src="file:///C:/Users/Developer%20Esols/OneDrive/Desktop/kafeel-ur-rahman.github.io/images/Developers%20Dens.webp" alt="Developers Dens Website">
+          </div>
+          <div class="body">
+            <h4>Developers Dens</h4>
+            <p>Custom WordPress development with optimized performance.</p>
+            <a href="https://developersdens.com/" target="_blank">View Project</a>
+          </div>
+        </article>
 
-      <article class="project reveal" data-tilt>
-        <div class="thumb"><span class="tag">WordPress</span>
-          <svg width="68" height="68" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <circle cx="12" cy="12" r="9" stroke="rgba(255,255,255,.6)"/>
-            <path d="M12 3v18M3 12h18" stroke="rgba(255,255,255,.6)"/>
-          </svg>
-        </div>
-        <div class="body">
-          <h4>Agency Website</h4>
-          <p>Gutenberg blocks + ACF fields with Lighthouse 95+ scores.</p>
-        </div>
-      </article>
+        <article class="project reveal" data-tilt>
+          <div class="thumb">
+            <span class="tag">WordPress</span>
+            <img src="file:///C:/Users/Developer%20Esols/OneDrive/Desktop/kafeel-ur-rahman.github.io/images/Techinnovis%20Website.webp" alt="Techinnovis Website">
+          </div>
+          <div class="body">
+            <h4>Techinnovis</h4>
+            <p>WordPress website with custom theme and functionality.</p>
+            <a href="https://techinnovis.com/" target="_blank">View Project</a>
+          </div>
+        </article>
 
-      <article class="project reveal" data-tilt>
-        <div class="thumb"><span class="tag">WooCommerce</span>
-          <svg width="68" height="68" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <rect x="4" y="6" width="16" height="12" rx="2" stroke="rgba(255,255,255,.6)"/>
-            <path d="M7 10h10M7 14h6" stroke="rgba(255,255,255,.6)"/>
-          </svg>
-        </div>
-        <div class="body">
-          <h4>Catalog & Checkout</h4>
-          <p>Optimized filters, custom checkout fields, and GA4 events.</p>
-        </div>
-      </article>
+        <article class="project reveal" data-tilt>
+          <div class="thumb">
+            <span class="tag">WordPress</span>
+            <img src="file:///C:/Users/Developer%20Esols/OneDrive/Desktop/kafeel-ur-rahman.github.io/images/bedsland.webp" alt="Bedsland Website">
+          </div>
+          <div class="body">
+            <h4>Bedsland</h4>
+            <p>E-commerce WordPress site with WooCommerce integration.</p>
+            <a href="https://www.bedsland.co.uk/" target="_blank">View Project</a>
+          </div>
+        </article>
 
-      <article class="project reveal" data-tilt>
-        <div class="thumb"><span class="tag">Wix</span>
-          <svg width="68" height="68" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M4 7h16v10H4z" stroke="rgba(255,255,255,.6)"/><path d="M6 10h12M6 14h8" stroke="rgba(255,255,255,.6)"/>
-          </svg>
-        </div>
-        <div class="body">
-          <h4>Portfolio Revamp</h4>
-          <p>Wix CMS collection design, custom interactions, and SEO setup.</p>
-        </div>
-      </article>
+        <article class="project reveal" data-tilt>
+          <div class="thumb">
+            <span class="tag">WordPress</span>
+            <img src="file:///C:/Users/Developer%20Esols/OneDrive/Desktop/kafeel-ur-rahman.github.io/images/sheds%20and%20fence.webp" alt="Sheds and Fence Website">
+          </div>
+          <div class="body">
+            <h4>Sheds and Fence</h4>
+            <p>WordPress site with custom product displays.</p>
+            <a href="https://shedsandfence.co.uk/" target="_blank">View Project</a>
+          </div>
+        </article>
 
-      <article class="project reveal" data-tilt>
-        <div class="thumb"><span class="tag">Webflow</span>
-          <svg width="68" height="68" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M6 18l4-12 4 8 4-6" stroke="rgba(255,255,255,.6)"/>
-          </svg>
-        </div>
-        <div class="body">
-          <h4>Landing System</h4>
-          <p>Component library, CMS collections, and multi-variant animations.</p>
-        </div>
-      </article>
+        <article class="project reveal" data-tilt>
+          <div class="thumb">
+            <span class="tag">WordPress</span>
+            <img src="file:///C:/Users/Developer%20Esols/OneDrive/Desktop/kafeel-ur-rahman.github.io/images/bedrush.png" alt="Bedrush Website">
+          </div>
+          <div class="body">
+            <h4>Bedrush</h4>
+            <p>WordPress e-commerce solution for bedding products.</p>
+            <a href="https://bedrush.co.uk/" target="_blank">View Project</a>
+          </div>
+        </article>
 
-      <article class="project reveal" data-tilt>
-        <div class="thumb"><span class="tag">PrestaShop</span>
-          <svg width="68" height="68" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M5 8h14v8H5z" stroke="rgba(255,255,255,.6)"/><path d="M7 10h10M7 14h6" stroke="rgba(255,255,255,.6)"/>
-          </svg>
-        </div>
-        <div class="body">
-          <h4>Multi-Currency Store</h4>
-          <p>Custom theme tweaks, payment/shipping modules, and schema markup.</p>
-        </div>
-      </article>
+        <article class="project reveal" data-tilt>
+          <div class="thumb">
+            <span class="tag">WordPress</span>
+            <img src="file:///C:/Users/Developer%20Esols/OneDrive/Desktop/kafeel-ur-rahman.github.io/images/Discount%20Beds%20Shop.webp" alt="Discount Bed Shop Website">
+          </div>
+          <div class="body">
+            <h4>Discount Bed Shop</h4>
+            <p>WooCommerce store with discount pricing functionality.</p>
+            <a href="https://discountbedshop.co.uk/" target="_blank">View Project</a>
+          </div>
+        </article>
+
+        <!-- Additional WordPress projects would follow the same pattern -->
+      </div>
+    </div>
+    
+    <!-- Shopify Projects -->
+    <div class="tab-content" id="shopify-tab">
+      <div class="grid">
+        <article class="project reveal" data-tilt>
+          <div class="thumb">
+            <span class="tag">Shopify</span>
+            <img src="file:///C:/Users/Developer%20Esols/OneDrive/Desktop/kafeel-ur-rahman.github.io/images/nexusmattress.png" alt="Nexus Mattress Website">
+          </div>
+          <div class="body">
+            <h4>Nexus Mattress</h4>
+            <p>Custom Shopify theme for mattress e-commerce store.</p>
+            <a href="https://nexusmattress.co.uk/" target="_blank">View Project</a>
+          </div>
+        </article>
+
+        <article class="project reveal" data-tilt>
+          <div class="thumb">
+            <span class="tag">Shopify</span>
+            <img src="file:///C:/Users/Developer%20Esols/OneDrive/Desktop/kafeel-ur-rahman.github.io/images/dipskip.webp" alt="Skipjedip Website">
+          </div>
+          <div class="body">
+            <h4>Skipjedip</h4>
+            <p>Shopify store with custom Liquid templates.</p>
+            <a href="https://skipjedip.nl/" target="_blank">View Project</a>
+          </div>
+        </article>
+
+        <article class="project reveal" data-tilt>
+          <div class="thumb">
+            <span class="tag">Shopify</span>
+            <img src="file:///C:/Users/Developer%20Esols/OneDrive/Desktop/kafeel-ur-rahman.github.io/images/amor.png" alt="Amor Clo Website">
+          </div>
+          <div class="body">
+            <h4>Amor Clo</h4>
+            <p>Fashion e-commerce store built on Shopify.</p>
+            <a href="https://amor-clo.com/" target="_blank">View Project</a>
+          </div>
+        </article>
+
+        <!-- Additional Shopify projects would follow the same pattern -->
+      </div>
+    </div>
+    
+    <!-- Other CMS Projects -->
+    <div class="tab-content" id="other-cms-tab">
+      <div class="grid">
+        <article class="project reveal" data-tilt>
+          <div class="thumb">
+            <span class="tag">PrestaShop</span>
+            <img src="file:///C:/Users/Developer%20Esols/OneDrive/Desktop/kafeel-ur-rahman.github.io/images/sloomy.png" alt="Sloomy Website">
+          </div>
+          <div class="body">
+            <h4>Sloomy</h4>
+            <p>PrestaShop e-commerce implementation.</p>
+            <a href="https://sloomy.co.uk/" target="_blank">View Project</a>
+          </div>
+        </article>
+
+        <!-- Additional Other CMS projects would follow the same pattern -->
+      </div>
     </div>
   </section>
 
@@ -419,24 +499,8 @@ Email: ${document.getElementById('email').value}
 Project:
 ${document.getElementById('msg').value}
 `;
-          window.location.href = 'mailto:Krmughal31@gmail.com?subject=' + encodeURIComponent('Project Inquiry — Kafeel Ur Rahman') + '&body=' + encodeURIComponent(body);
-        ">
-        <h4 id="contactFormHeading" style="margin:0 0 6px 0">Quick message</h4>
-        <div class="field">
-          <label for="name">Your name</label>
-          <input id="name" placeholder="John Doe" required aria-required="true">
-        </div>
-        <div class="field">
-          <label for="email">Email</label>
-          <input id="email" type="email" placeholder="you@example.com" required aria-required="true">
-        </div>
-        <div class="field">
-          <label for="msg">Project details</label>
-          <textarea id="msg" placeholder="I need a Shopify store with..." required aria-required="true"></textarea>
-        </div>
-        <button class="btn" type="submit">Send Message</button>
-        <span class="note">This opens your email app. You can replace the address with another inbox if needed.</span>
-      </form>
+window.location.href = 'mailto:Krmughal31@gmail.com?subject=' + encodeURIComponent('Project Inquiry — Kafeel Ur Rahman') + '&body=' + encodeURIComponent(body);
+"> <h4 id="contactFormHeading" style="margin:0 0 6px 0">Quick message</h4> <div class="field"> <label for="name">Your name</label> <input id="name" placeholder="John Doe" required aria-required="true"> </div> <div class="field"> <label for="email">Email</label> <input id="email" type="email" placeholder="you@example.com" required aria-required="true"> </div> <div class="field"> <label for="msg">Project details</label> <textarea id="msg" placeholder="I need a Shopify store with..." required aria-required="true"></textarea> </div> <button class="btn" type="submit">Send Message</button> <span class="note">This opens your email app. You can replace the address with another inbox if needed.</span> </form>
 
       <div class="card reveal">
         <h4>Contact</h4>
@@ -451,12 +515,12 @@ ${document.getElementById('msg').value}
         <p style="margin:0;color:var(--muted)">
           ESOLS Technologies — WordPress Developer (2023–Present)<br/>
           ROZE NEWS — Web Developer (2022–2024)<br/>
-          NexoLeaf — Web Developer (2018–2022) <!-- From CV :contentReference[oaicite:4]{index=4} -->
+          NexoLeaf — Web Developer (2018–2022)
         </p>
         <h4 style="margin:14px 0 6px 0">Education</h4>
         <p style="margin:0;color:var(--muted)">
           BS Computer Science — Abasyn University (2018–2023)<br/>
-          DIT — Punjab Technical Board (2015–2018) <!-- From CV :contentReference[oaicite:5]{index=5} -->
+          DIT — Punjab Technical Board (2015–2018)
         </p>
       </div>
     </div>
@@ -516,6 +580,23 @@ ${document.getElementById('msg').value}
 
     // Year
     document.getElementById('year').textContent=new Date().getFullYear();
+    
+    // Tab functionality
+    document.querySelectorAll('.tab-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active class from all buttons and content
+        document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+        
+        // Add active class to clicked button
+        button.classList.add('active');
+        
+        // Show corresponding content
+        const tabId = button.getAttribute('data-tab');
+        document.getElementById(`${tabId}-tab`).classList.add('active');
+      });
+    });
   </script>
+
 </body>
 </html>
