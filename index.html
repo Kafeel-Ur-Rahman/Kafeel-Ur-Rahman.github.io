@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<<<<<<< HEAD
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Kafeel Ur Rehman — WordPress &amp; Shopify Developer</title>
@@ -868,5 +869,607 @@ document.querySelectorAll('.btn-cta').forEach(btn => {
   });
 });
 </script>
+=======
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kafeel Ur Rahman — WordPress, Shopify, Wix, PrestaShop & Webflow Developer</title>
+  <meta name="description" content="Portfolio of Kafeel Ur Rahman — Expert in WordPress, Shopify (Liquid), Wix, PrestaShop, and Webflow. Custom themes, e-commerce, speed & SEO, and full-stack integrations." />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Kafeel Ur Rahman — WordPress, Shopify, Wix, PrestaShop & Webflow Developer" />
+  <meta property="og:description" content="Custom themes, e-commerce builds, UI performance, and full-stack integrations for high-converting sites." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kafeel.dev/" />
+  <meta property="og:image" content="https://kafeel.dev/og-cover.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kafeel Ur Rahman — Web Developer" />
+  <meta name="twitter:description" content="WordPress • Shopify • Wix • PrestaShop • Webflow • SEO & Performance" />
+  <meta name="twitter:image" content="https://kafeel.dev/og-cover.jpg" />
+
+  <!-- JSON-LD (Person) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Kafeel Ur Rahman",
+    "jobTitle": "Web Developer",
+    "url": "https://kafeel.dev/",
+    "email": "mailto:Krmughal31@gmail.com",
+    "telephone": "+92-340-8863377",
+    "knowsAbout": [
+      "WordPress", "WooCommerce", "Shopify Liquid", "Wix",
+      "PrestaShop", "Webflow", "HTML", "CSS", "JavaScript", "PHP",
+      "ACF", "Gutenberg", "Theme Development", "Performance", "SEO", "REST APIs", "Git", "CI/CD"
+    ],
+    "sameAs": [
+      "https://github.com/Kafeel-Ur-Rahman",
+      "https://www.linkedin.com/in/kafeel-ur-rahman-wordpress-developer/"
+    ],
+    "worksFor": {"@type": "Organization", "name": "ESOLS Technologies"},
+    "address": {"@type": "PostalAddress", "addressCountry": "PK", "addressLocality": "Islamabad"}
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0b1220;           /* Deep navy */
+      --bg-2:#0f1629;         /* Card bg */
+      --text:#e6ecff;         /* Primary text */
+      --muted:#9fb2ff;        /* Muted text */
+      --brand:#6dd6ff;        /* Accent */
+      --brand-2:#8b5cf6;      /* Secondary accent */
+      --card:#111935;         /* Elevated card */
+      --line:rgba(255,255,255,.08);
+      --ok:#22c55e; --warn:#f59e0b; --err:#ef4444;
+      --radius:18px;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;
+      color:var(--text);
+      background: radial-gradient(1200px 800px at 80% -10%, rgba(109,214,255,.18), transparent 60%),
+                  radial-gradient(900px 700px at -10% 20%, rgba(139,92,246,.20), transparent 60%),
+                  var(--bg);
+      line-height:1.6;
+      overflow-x:hidden;
+    }
+
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    section{padding:88px 20px}
+    .container{max-width:1120px;margin:0 auto}
+
+    /* ====== NAV ====== */
+    .nav{position:sticky;top:0;z-index:50;backdrop-filter:saturate(140%) blur(8px);background:rgba(11,18,32,.65);border-bottom:1px solid var(--line)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 20px;max-width:1120px;margin:0 auto}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:38px;height:38px;border-radius:12px;background:conic-gradient(from 90deg,var(--brand),var(--brand-2),#60a5fa,var(--brand));box-shadow:0 6px 18px rgba(109,214,255,.35)}
+    .brand h1{font-size:18px;margin:0;font-weight:800;letter-spacing:.3px}
+    .nav-links{display:flex;gap:16px;align-items:center}
+    .nav-links a{padding:10px 14px;border-radius:12px;border:1px solid transparent}
+    .nav-links a:hover{border-color:var(--line);background:rgba(255,255,255,.03)}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:14px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#061024;border:none;cursor:pointer;font-weight:700;box-shadow:0 10px 22px rgba(109,214,255,.25);transition:transform .15s ease}
+    .btn:active{transform:translateY(1px)}
+    .ghost{padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.02)}
+
+    /* ====== HERO ====== */
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center}
+    .badge{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border:1px solid var(--line);border-radius:999px;color:var(--muted);background:rgba(255,255,255,.03)}
+    .hero h2{font-size: clamp(34px, 6vw, 56px);line-height:1.1;margin:14px 0 14px;font-weight:800}
+    .hero p{color:var(--muted);font-size:18px}
+    .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px}
+
+    .device{aspect-ratio: 4/3;background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:24px;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+    .blob{position:absolute;width:340px;height:340px;filter:blur(40px);opacity:.35;border-radius:50%;background:radial-gradient(circle,var(--brand) 0%, transparent 60%);left:-40px;top:-40px;animation:float 9s ease-in-out infinite}
+    .blob2{background:radial-gradient(circle,var(--brand-2) 0%, transparent 60%);left:auto;right:-40px;top:auto;bottom:-40px;animation:float 11s ease-in-out infinite}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+    .preview{position:absolute;inset:18px;border-radius:18px;background:#0a1228;border:1px solid var(--line);overflow:hidden}
+    .preview .bar{height:42px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px;padding:0 12px;background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.0))}
+    .dots{display:flex;gap:8px}
+    .dot{width:10px;height:10px;border-radius:999px;background:#29324c}
+    .url{margin-left:auto;color:#8ea2e6;font-size:12px}
+    .preview .content{padding:18px;display:grid;grid-template-columns:1.2fr .8fr;gap:12px}
+    .skeleton{height:12px;background:linear-gradient(90deg,rgba(255,255,255,.06),rgba(255,255,255,.02),rgba(255,255,255,.06));background-size:200% 100%;animation:shine 2s linear infinite;border-radius:6px}
+    @keyframes shine{to{background-position:-200% 0}}
+
+    /* ====== SECTION HEAD ====== */
+    .head{display:flex;align-items:end;justify-content:space-between;margin-bottom:28px;gap:18px}
+    .head h3{font-size:26px;margin:0;font-weight:800}
+    .head p{margin:0;color:var(--muted)}
+
+    /* ====== ABOUT ====== */
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:10px}
+    .stat{padding:16px;border-radius:16px;background:rgba(255,255,255,.03);border:1px dashed var(--line);text-align:center}
+    .stat h4{margin:0;font-size:26px}
+    .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+    .chip{padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.02);font-size:14px}
+
+    /* ====== SERVICES ====== */
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .service{position:relative;overflow:hidden}
+    .service:hover .spark{opacity:1;transform:translateY(0)}
+    .spark{position:absolute;inset:auto 0 0 0;height:4px;background:linear-gradient(90deg,var(--brand),var(--brand-2));opacity:0;transform:translateY(6px);transition:.25s ease}
+
+    /* ====== PROJECTS ====== */
+    .tabs {display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap;}
+    .tab-btn {padding: 10px 18px; border-radius: 12px; border: 1px solid var(--line); background: rgba(255,255,255,.02); cursor: pointer; transition: all 0.2s ease;}
+    .tab-btn:hover {background: rgba(255,255,255,.05);}
+    .tab-btn.active {background: linear-gradient(135deg, var(--brand), var(--brand-2)); color: #061024; border-color: transparent;}
+    .tab-content {display: none;}
+    .tab-content.active {display: grid;}
+    
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .project{position:relative;overflow:hidden;border-radius:18px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));transform-style:preserve-3d;transition:transform .12s ease}
+    .project:hover{transform:translateY(-3px)}
+    .thumb{aspect-ratio: 16/10;background:linear-gradient(135deg,#101b3a,#0e1731);display:grid;place-items:center;overflow:hidden;}
+    .thumb img {width: 100%; height: 100%; object-fit: cover;}
+    .tag{position:absolute;top:12px;left:12px;padding:6px 10px;border-radius:999px;background:rgba(0,0,0,.45);border:1px solid var(--line);font-size:12px}
+    .project .body{padding:16px}
+    .project h4{margin:0 0 6px 0}
+    .project p{margin:0;color:var(--muted);font-size:14px}
+
+    /* ====== CONTACT ====== */
+    .contact{display:grid;grid-template-columns:1.2fr .8fr;gap:20px}
+    form{display:grid;gap:12px}
+    .field{display:grid;gap:6px}
+    input,textarea{background:#0c142b;border:1px solid var(--line);color:var(--text);padding:14px;border-radius:14px;font:inherit}
+    textarea{min-height:140px;resize:vertical}
+    .note{font-size:13px;color:var(--muted)}
+
+    /* ====== FOOTER ====== */
+    footer{border-top:1px solid var(--line);padding:26px 20px;color:var(--muted);text-align:center}
+
+    /* ====== REVEAL ANIMATIONS ====== */
+    .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease, transform .6s ease}
+    .reveal.show{opacity:1;transform:none}
+
+    /* ====== RESPONSIVE ====== */
+    @media (max-width:1024px){
+      .hero{grid-template-columns:1fr}
+      .about,.contact{grid-template-columns:1fr}
+      .services,.grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:640px){
+      .nav-links{display:none}
+      .services,.grid{grid-template-columns:1fr}
+      section{padding:70px 16px}
+      .head h3{font-size:22px}
+    }
+  </style>
+
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav" aria-label="Primary navigation">
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <h1>Kafeel Ur Rahman</h1>
+      </div>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a class="ghost" href="https://github.com/Kafeel-Ur-Rahman" target="_blank" rel="noreferrer" rel="me">GitHub</a>
+        <a class="btn" href="#contact" aria-label="Hire Kafeel">Hire Me</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="container hero">
+    <div class="reveal">
+      <span class="badge" aria-label="Greeting">👋 Hello, I'm</span>
+      <h2>Kafeel Ur Rahman —<br/> WordPress, Shopify, Wix, PrestaShop & Webflow Developer</h2>
+      <p>
+        Creative and results-driven Web Developer with 4+ years building responsive, high-converting websites and custom e-commerce solutions.
+        I ship clean code, smooth animations, and Lighthouse-friendly performance with rock-solid SEO & tracking.
+      </p>
+      <div class="cta">
+        <a class="btn" href="#projects">View Projects</a>
+        <a class="ghost" href="mailto:Krmughal31@gmail.com">Krmughal31@gmail.com</a>
+        <a class="ghost" href="kafeel.cv.pdf" download="Kafeel-Ur-Rahman-CV.pdf" aria-label="Download CV">Download CV</a>
+      </div>
+    </div>
+    <div class="device reveal" aria-hidden="true">
+      <div class="blob"></div><div class="blob blob2"></div>
+      <div class="preview">
+        <div class="bar">
+          <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+          <span class="url">kafeel.dev/preview</span>
+        </div>
+        <div class="content">
+          <div>
+            <div class="skeleton" style="height:26px;width:60%"></div>
+            <div class="skeleton" style="margin-top:10px;width:90%"></div>
+            <div class="skeleton" style="margin-top:8px;width:85%"></div>
+            <div class="skeleton" style="margin-top:8px;width:70%"></div>
+            <div class="skeleton" style="margin-top:18px;height:40px;width:42%"></div>
+          </div>
+          <div>
+            <div class="skeleton" style="height:120px;border-radius:12px"></div>
+            <div class="skeleton" style="margin-top:12px;height:18px;width:70%"></div>
+            <div class="skeleton" style="margin-top:8px;height:12px;width:90%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="container">
+    <div class="head">
+      <h3>About</h3>
+      <p>ESOLS Technologies • 4+ years • Performance-first</p>
+    </div>
+    <div class="about">
+      <div class="card reveal">
+        <h4 style="margin:0 0 6px 0">Who I am</h4>
+        <p style="margin:0;color:var(--muted)">
+          I craft elegant, conversion-focused websites and scalable storefronts. My stack covers WordPress (Gutenberg/ACF), WooCommerce, Shopify (Liquid),
+          Wix, PrestaShop, and Webflow — with custom APIs, analytics, and CI/CD baked in.
+        </p>
+        <div class="stats" aria-label="Quick stats">
+          <div class="stat"><h4 id="stat1">0+</h4><span>Projects</span></div>
+          <div class="stat"><h4 id="stat2">0+</h4><span>Clients</span></div>
+          <div class="stat"><h4 id="stat3">0+</h4><span>Deploys</span></div>
+        </div>
+      </div>
+      <div class="card reveal">
+        <h4 style="margin:0 0 6px 0">Skills</h4>
+        <p style="margin:0;color:var(--muted)">Toolbox I use daily.</p>
+        <div class="chips" aria-label="Skills and tools">
+          <span class="chip">WordPress</span>
+          <span class="chip">WooCommerce</span>
+          <span class="chip">Shopify (Liquid)</span>
+          <span class="chip">Wix</span>
+          <span class="chip">PrestaShop</span>
+          <span class="chip">Webflow</span>
+          <span class="chip">Gutenberg & ACF</span>
+          <span class="chip">Theme Dev & Customization</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">HTML/CSS</span>
+          <span class="chip">PHP</span>
+          <span class="chip">REST APIs</span>
+          <span class="chip">SEO & Performance</span>
+          <span class="chip">Git & CI</span>
+          <span class="chip">MySQL</span>
+          <span class="chip">cPanel & Hosting</span>
+          <span class="chip">Responsive Design</span>
+        </div>
+        <div class="chips" style="margin-top:14px" aria-label="Languages">
+          <span class="chip">Urdu — Fluent</span>
+          <span class="chip">Hindku — Fluent</span>
+          <span class="chip">English — Intermediate</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="container">
+    <div class="head">
+      <h3>Services</h3>
+      <p>End-to-end solutions tailored to your brand.</p>
+    </div>
+    <div class="services">
+      <div class="card service reveal">
+        <h4>Custom WordPress</h4>
+        <p style="color:var(--muted)">Themes, Gutenberg blocks, ACF, WooCommerce, and performance/SEO with clean PHP & JS.</p>
+        <div class="spark"></div>
+      </div>
+      <div class="card service reveal">
+        <h4>Shopify Stores</h4>
+        <p style="color:var(--muted)">Liquid themes, custom sections, app wiring, GA4 & pixel tracking, and CRO-ready UX.</p>
+        <div class="spark"></div>
+      </div>
+      <div class="card service reveal">
+        <h4>Wix • PrestaShop • Webflow</h4>
+        <p style="color:var(--muted)">Professional builds, template customization, CMS/data modeling, and SEO setups across platforms.</p>
+        <div class="spark"></div>
+      </div>
+      <div class="card service reveal">
+        <h4>Maintenance & SEO</h4>
+        <p style="color:var(--muted)">Speed optimization, audits, backups, uptime, security hardening, and technical SEO.</p>
+        <div class="spark"></div>
+      </div>
+      <div class="card service reveal">
+        <h4>Integrations & APIs</h4>
+        <p style="color:var(--muted)">Payment/shipping, CRM, email automation, REST APIs, and analytics dashboards.</p>
+        <div class="spark"></div>
+      </div>
+      <div class="card service reveal">
+        <h4>Migrations & Conversions</h4>
+        <p style="color:var(--muted)">Figma/Adobe XD/Canva → live site, HTML → WordPress, and platform-to-platform migrations.</p>
+        <div class="spark"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="container">
+    <div class="head">
+      <h3>Featured Projects</h3>
+      <p>Selected work with clean UX and subtle motion.</p>
+    </div>
+    
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="wordpress">WordPress</button>
+      <button class="tab-btn" data-tab="shopify">Shopify</button>
+      <button class="tab-btn" data-tab="other-cms">Other CMS</button>
+    </div>
+    
+    <!-- WordPress Projects -->
+    <div class="tab-content active" id="wordpress-tab">
+  <div class="grid">
+
+    <article class="project reveal" data-tilt>
+      <div class="thumb">
+        <span class="tag">WordPress</span>
+        <img src="images/Developers Dens.webp" alt="Developers Dens Website">
+      </div>
+      <div class="body">
+        <h4>Developers Dens</h4>
+        <p>Custom WordPress development with optimized performance.</p>
+        <a href="https://developersdens.com/" target="_blank">View Project</a>
+      </div>
+    </article>
+
+    <article class="project reveal" data-tilt>
+      <div class="thumb">
+        <span class="tag">WordPress</span>
+        <img src="images/Techinnovis Website.webp" alt="Techinnovis Website">
+      </div>
+      <div class="body">
+        <h4>Techinnovis</h4>
+        <p>WordPress website with custom theme and functionality.</p>
+        <a href="https://techinnovis.com/" target="_blank">View Project</a>
+      </div>
+    </article>
+
+    <article class="project reveal" data-tilt>
+      <div class="thumb">
+        <span class="tag">WordPress</span>
+        <img src="images/bedsland.webp" alt="Bedsland Website">
+      </div>
+      <div class="body">
+        <h4>Bedsland</h4>
+        <p>E-commerce WordPress site with WooCommerce integration.</p>
+        <a href="https://www.bedsland.co.uk/" target="_blank">View Project</a>
+      </div>
+    </article>
+
+    <article class="project reveal" data-tilt>
+      <div class="thumb">
+        <span class="tag">WordPress</span>
+        <img src="images/sheds and fence.webp" alt="Sheds and Fence Website">
+      </div>
+      <div class="body">
+        <h4>Sheds and Fence</h4>
+        <p>WordPress site with custom product displays.</p>
+        <a href="https://shedsandfence.co.uk/" target="_blank">View Project</a>
+      </div>
+    </article>
+
+    <article class="project reveal" data-tilt>
+      <div class="thumb">
+        <span class="tag">WordPress</span>
+        <img src="images/bedrush.png" alt="Bedrush Website">
+      </div>
+      <div class="body">
+        <h4>Bedrush</h4>
+        <p>WordPress e-commerce solution for bedding products.</p>
+        <a href="https://bedrush.co.uk/" target="_blank">View Project</a>
+      </div>
+    </article>
+
+    <article class="project reveal" data-tilt>
+      <div class="thumb">
+        <span class="tag">WordPress</span>
+        <img src="images/Discount Beds Shop.webp" alt="Discount Bed Shop Website">
+      </div>
+      <div class="body">
+        <h4>Discount Bed Shop</h4>
+        <p>WooCommerce store with discount pricing functionality.</p>
+        <a href="https://discountbedshop.co.uk/" target="_blank">View Project</a>
+      </div>
+    </article>
+
+  </div>
+</div>
+
+    
+    <!-- Shopify Projects -->
+    <div class="tab-content" id="shopify-tab">
+  <div class="grid">
+
+    <article class="project reveal" data-tilt>
+      <div class="thumb">
+        <span class="tag">Shopify</span>
+        <img src="images/nexusmattress.png" alt="Nexus Mattress Website">
+      </div>
+      <div class="body">
+        <h4>Nexus Mattress</h4>
+        <p>Custom Shopify theme for mattress e-commerce store.</p>
+        <a href="https://nexusmattress.co.uk/" target="_blank">View Project</a>
+      </div>
+    </article>
+
+    <article class="project reveal" data-tilt>
+      <div class="thumb">
+        <span class="tag">Shopify</span>
+        <img src="images/dipskip.webp" alt="Skipjedip Website">
+      </div>
+      <div class="body">
+        <h4>Skipjedip</h4>
+        <p>Shopify store with custom Liquid templates.</p>
+        <a href="https://skipjedip.nl/" target="_blank">View Project</a>
+      </div>
+    </article>
+
+    <article class="project reveal" data-tilt>
+      <div class="thumb">
+        <span class="tag">Shopify</span>
+        <img src="images/amor.png" alt="Amor Clo Website">
+      </div>
+      <div class="body">
+        <h4>Amor Clo</h4>
+        <p>Fashion e-commerce store built on Shopify.</p>
+        <a href="https://amor-clo.com/" target="_blank">View Project</a>
+      </div>
+    </article>
+
+  </div>
+</div>
+
+    
+    <!-- Other CMS Projects -->
+   <div class="tab-content" id="other-cms-tab">
+  <div class="grid">
+
+    <article class="project reveal" data-tilt>
+      <div class="thumb">
+        <span class="tag">PrestaShop</span>
+        <img src="images/sloomy.png" alt="Sloomy Website">
+      </div>
+      <div class="body">
+        <h4>Sloomy</h4>
+        <p>PrestaShop e-commerce implementation.</p>
+        <a href="https://sloomy.co.uk/" target="_blank">View Project</a>
+      </div>
+    </article>
+
+  </div>
+</div>
+
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="container">
+    <div class="head">
+      <h3>Let's build something</h3>
+      <p>Tell me about your project. I reply within 24 hours.</p>
+    </div>
+    <div class="contact">
+      <form class="card reveal" aria-labelledby="contactFormHeading"
+        onsubmit="event.preventDefault();
+          const body=`
+Name: ${document.getElementById('name').value}
+Email: ${document.getElementById('email').value}
+
+Project:
+${document.getElementById('msg').value}
+`;
+window.location.href = 'mailto:Krmughal31@gmail.com?subject=' + encodeURIComponent('Project Inquiry — Kafeel Ur Rahman') + '&body=' + encodeURIComponent(body);
+"> <h4 id="contactFormHeading" style="margin:0 0 6px 0">Quick message</h4> <div class="field"> <label for="name">Your name</label> <input id="name" placeholder="John Doe" required aria-required="true"> </div> <div class="field"> <label for="email">Email</label> <input id="email" type="email" placeholder="you@example.com" required aria-required="true"> </div> <div class="field"> <label for="msg">Project details</label> <textarea id="msg" placeholder="I need a Shopify store with..." required aria-required="true"></textarea> </div> <button class="btn" type="submit">Send Message</button> <span class="note">This opens your email app. You can replace the address with another inbox if needed.</span> </form>
+
+      <div class="card reveal">
+        <h4>Contact</h4>
+        <p style="color:var(--muted)">Prefer email? Reach me anytime.</p>
+        <p><strong>Phone:</strong> <a href="tel:+923408863377">+92 340 8863377</a></p>
+        <p><strong>Email:</strong> <a href="mailto:Krmughal31@gmail.com">Krmughal31@gmail.com</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/Kafeel-Ur-Rahman" target="_blank" rel="noreferrer">github.com/Kafeel-Ur-Rahman</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/kafeel-ur-rahman-wordpress-developer/" target="_blank" rel="noreferrer">linkedin.com/in/kafeel-ur-rahman-wordpress-developer</a></p>
+        <p><strong>Location:</strong> Islamabad, Pakistan (Remote friendly)</p>
+        <hr style="border-color:var(--line);border-width:1px 0 0;margin:14px 0">
+        <h4 style="margin:0 0 6px 0">Experience</h4>
+        <p style="margin:0;color:var(--muted)">
+          ESOLS Technologies — WordPress Developer (2023–Present)<br/>
+          ROZE NEWS — Web Developer (2022–2024)<br/>
+          NexoLeaf — Web Developer (2018–2022)
+        </p>
+        <h4 style="margin:14px 0 6px 0">Education</h4>
+        <p style="margin:0;color:var(--muted)">
+          BS Computer Science — Abasyn University (2018–2023)<br/>
+          DIT — Punjab Technical Board (2015–2018)
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Kafeel Ur Rahman — Web Developer. Built with ♥ and clean code.
+  </footer>
+
+  <script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id=a.getAttribute('href').slice(1);
+        const el=document.getElementById(id);
+        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); }
+      });
+    });
+
+    // Reveal on scroll
+    const io=new IntersectionObserver((entries)=>{
+      entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('show'); io.unobserve(en.target); }});
+    },{threshold:.15});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+    // Counter animation
+    const countTo=(el, target)=>{
+      const dur=1200, start=performance.now();
+      const step=(t)=>{
+        const p=Math.min((t-start)/dur,1); el.textContent=Math.floor(p*target)+"+"; if(p<1) requestAnimationFrame(step);
+      }; requestAnimationFrame(step);
+    };
+    const statsIO=new IntersectionObserver((entries)=>{
+      entries.forEach(en=>{
+        if(en.isIntersecting){
+          countTo(document.getElementById('stat1'), 45);
+          countTo(document.getElementById('stat2'), 28);
+          countTo(document.getElementById('stat3'), 120);
+          statsIO.disconnect();
+        }
+      });
+    },{threshold:.6});
+    statsIO.observe(document.getElementById('about'));
+
+    // Subtle tilt for project cards
+    const tilt=(card)=>{
+      const r=12; // rotation limit
+      card.addEventListener('mousemove', (e)=>{
+        const rect=card.getBoundingClientRect();
+        const x=(e.clientX-rect.left)/rect.width*2-1;
+        const y=(e.clientY-rect.top)/rect.height*2-1;
+        card.style.transform=`rotateX(${-y*r}deg) rotateY(${x*r}deg) translateY(-3px)`;
+      });
+      card.addEventListener('mouseleave',()=>{ card.style.transform=''; });
+    };
+    document.querySelectorAll('[data-tilt]').forEach(tilt);
+
+    // Year
+    document.getElementById('year').textContent=new Date().getFullYear();
+    
+    // Tab functionality
+    document.querySelectorAll('.tab-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active class from all buttons and content
+        document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+        
+        // Add active class to clicked button
+        button.classList.add('active');
+        
+        // Show corresponding content
+        const tabId = button.getAttribute('data-tab');
+        document.getElementById(`${tabId}-tab`).classList.add('active');
+      });
+    });
+  </script>
+
+>>>>>>> 02284b6c468fad5cdc09d624747019480933ffea
 </body>
 </html>
